@@ -1,0 +1,27 @@
+
+//for common boxes
+@mixin box($value) {
+    width: $value;
+    min-width: $value;
+    max-width: $value;
+    height: $value;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // maximum media query
+@mixin maxQuery($max-width) {
+    @media (max-width: #{$max-width}px) {
+        @content;
+    }
+}
+
+// minimum media query
+@mixin minQuery($min-width) {
+    @media (min-width: #{$min-width}px) {
+        @content;
+    }
+}
+

@@ -1,0 +1,32 @@
+/* =========== css table of contents =========
+
+ * theme name: GamePlex v2
+ * version: 1.0
+ * description: Gaming and live streaming HTML Template
+ * author: Pixelaxis
+ * author-url: https://themeforest.net/user/pixelaxis
+
+     00 --> tabler icons
+     01 --> mixins
+     02 --> variables
+     03 --> typography
+     03 --> animation
+     03 --> buttons
+     04 --> navbar
+     05 --> global
+     06 --> section
+     07 --> preloader
+    ================================== */
+
+/* ============= plugin styles ============== */
+@import "../webfont/tabler-icons.min.css";
+@import "../css/swiper-bundle.min.css";
+@import "./components/mixins";
+@import "./components/variable";
+@import "./components/typography";
+@import "./animation/animation.scss";
+@import "./components/buttons";
+@import "./base/navbar";
+@import "./base/global";
+@import "./base/section";
+@import "./components/preloader";

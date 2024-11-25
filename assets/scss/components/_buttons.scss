@@ -1,0 +1,179 @@
+// circle icon button
+.btn-circle {
+    @include box(42px);
+    background: rgb(var(--p1));
+    font-weight: normal;
+
+    @include maxQuery(575) {
+        @include box(30px);
+    }
+}
+
+.box-style {
+    @include box(48px);
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+    border: 1px solid rgb(var(--p1));
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: var(--x);
+        left: var(--y);
+        transform: translate(-50%, -50%);
+        transition: all 0.7s ease;
+        background: rgb(var(--p1));
+        border-radius: inherit;
+        width: 0;
+        height: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            width: 200%;
+            height: 200%;
+        }
+    }
+
+    &.alt-box {
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+        height: 100%;
+
+        &::before {
+            background: rgba(var(--p1), 0.2);
+        }
+
+        &:hover {
+            &::before {
+                width: 300%;
+                height: 500%;
+            }
+        }
+    }
+}
+
+// rounded icon button
+.btn-rounded-cus {
+    background: rgba(var(--p1), 0.3);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: rgb(var(--p1));
+        border-radius: inherit;
+        width: 0;
+        height: 100%;
+        z-index: -1;
+        transition: width 0.5s ease-in-out;
+
+        @include maxQuery(991) {
+            display: none;
+        }
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.btn-half-border {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: inherit;
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        z-index: -1;
+        transition: border 0.3s ease-in-out;
+        border: 2px solid transparent;
+        border-color: transparent rgb(var(--p1));
+    }
+
+    &:hover {
+        &::before {
+            border-color: rgb(var(--p1));
+        }
+    }
+}
+
+.btn2 {
+    @include box(48px);
+    background: rgb(var(--s1));
+    transition: all 0.5s ease;
+}
+
+// swiper button
+.swiper-btn {
+    @include box(56px);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        border: 1px dashed rgb(var(--p1));
+        z-index: -1;
+    }
+
+    &.box-style {
+        border: unset;
+    }
+
+    @include maxQuery(767) {
+        @include box(40px);
+    }
+}
+
+.claim-btn {
+    padding: 12px 24px;
+    background: rgb(var(--n3));
+    border-radius: 50px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background: rgb(var(--p1));
+    }
+}
+
+
+.bttn {
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.send-msg {
+    background: rgb(var(--p2));
+    border-radius: 50px;
+}
+
+// notification btn
+.ntf-btn {
+    @include box(60px);
+
+    @include maxQuery(991) {
+        @include box(42px);
+    }
+
+    @include maxQuery(575) {
+        @include box(30px);
+    }
+}

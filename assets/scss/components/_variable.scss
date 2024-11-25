@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "estedadv";
+    src: url("../fonts/estedad/fd/estedad-fd-var.woff2") format("woff2-variations"), url("../fonts/estedad/fd/estedad-fd-var.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: estedad;
+    src: url("../fonts/estedad/fd/estedad-FD-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: estedad;
+    src: url("../fonts/estedad/fd/estedad-FD-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-variation-settings: "wght" 700;
+}
+
+:root {
+    // font family
+    --body-font: estedad, sans-serif;
+    --head-font: estedad, sans-serif;
+
+    // colors
+    --p1: 246, 87, 30;
+    --p2: 255, 172, 5;
+    --s1: 96, 214, 0;
+    --s2: 23, 125, 47;
+    --s3: 13, 141, 232;
+    --n0: 0, 0, 0;
+    --n1: 255, 255, 255;
+    --n3: 36, 40, 41;
+    --n4: 13, 15, 18;
+    --n5: 23, 25, 28;
+    --n6: 181, 181, 181;
+    // gradient
+    --gradient1: linear-gradient(218deg, #F76D1F 0%, #F6471C 100%, #F62F1A 100%);
+    --gradient2: linear-gradient(1deg, #F54C0A 0.43%, rgba(232, 81, 23, 0.20) 99.55%);
+    --gradient3: linear-gradient(188deg, rgba(247, 109, 31, 0.15) 5.73%, rgba(246, 71, 28, 0.00) 92.87%, rgba(246, 47, 26, 0.15) 92.87%);
+    --gradient4: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.80) 100%);
+
+    // transition
+    --transition: all 0.5s ease-in-out;
+}
